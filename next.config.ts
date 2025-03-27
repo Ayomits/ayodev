@@ -1,7 +1,13 @@
-import type { NextConfig } from "next";
+import createMDX from '@next/mdx';
+import { NextConfig } from 'next';
+import { withContentlayer } from 'next-contentlayer';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
 };
 
-export default nextConfig;
+const withMDX = createMDX({});
+
+const withContentLayer = withContentlayer(withMDX(nextConfig));
+
+export default withContentLayer;
