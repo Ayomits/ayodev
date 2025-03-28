@@ -24,6 +24,7 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
       <div
         ref={ref}
         className={cn(cardStyles({ variant: variant }), className)}
+        {...props}
       >
         {children}
       </div>
@@ -34,7 +35,11 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
 const CardHeader = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ className, children, ...props }, ref) => {
     return (
-      <div className='p-6 flex flex-col gap-2' ref={ref}>
+      <div
+        className={cn('p-6 flex flex-col gap-2', className)}
+        ref={ref}
+        {...props}
+      >
         {children}
       </div>
     );
@@ -43,7 +48,11 @@ const CardHeader = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
 const CardTitle = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ className, children, ...props }, ref) => {
     return (
-      <div className='text-foreground text-xl font-bold' ref={ref}>
+      <div
+        className={cn('text-foreground text-xl font-bold', className)}
+        ref={ref}
+        {...props}
+      >
         {children}
       </div>
     );
@@ -54,7 +63,11 @@ const CardDescription = forwardRef<
   HTMLAttributes<HTMLDivElement>
 >(({ className, children, ...props }, ref) => {
   return (
-    <div className='text-secondary text-sm' ref={ref}>
+    <div
+      className={cn('text-secondary text-sm', className)}
+      ref={ref}
+      {...props}
+    >
       {children}
     </div>
   );
@@ -62,7 +75,7 @@ const CardDescription = forwardRef<
 const CardContent = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ className, children, ...props }, ref) => {
     return (
-      <div className={cn('p-6 pt-0 flex', className)} ref={ref}>
+      <div className={cn('p-6 pt-0 flex', className)} ref={ref} {...props}>
         {children}
       </div>
     );
@@ -74,6 +87,7 @@ const CardFooter = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
       <div
         className={cn('flex p-6 pt-0 gap-2 items-center w-full', className)}
         ref={ref}
+        {...props}
       >
         {children}
       </div>

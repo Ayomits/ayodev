@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "yarn build:docs && next dev --turbopack",
+    "types:check": "npx tsc --build",
     "build:next": "next build",
     "build:docs": "npx contentlayer build",
     "start": "next start",
@@ -42,7 +43,6 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.4",
-    "eslint-plugin-tailwindcss": "^3.18.0",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^4",
