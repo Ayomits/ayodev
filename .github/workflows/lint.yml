@@ -1,0 +1,34 @@
+name: Lint
+
+on:
+  workflow_dispatch:
+  push:
+    branches-ignore:
+      - main
+  pull_request:
+    branches-ignore:
+      - main
+
+jobs:
+  run-formatters:
+    name: format
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 18.18.2
+      - name: Install dependencies
+        run: yarn install
+      - name: Generate docs
+        run: yarn build:docs
+      - name: Types check
+        run: yarn types:check
+      - name: Run linters
+        run: yarn format:check
+      - name: Eslint check
+        run: yarn eslint:check
+      - name: Next build
+        run: yarn build:next

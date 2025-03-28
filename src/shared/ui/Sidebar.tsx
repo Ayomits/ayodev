@@ -21,7 +21,7 @@ import {
 } from '@/shared/ui/Tooltip';
 import { Slot } from '@radix-ui/react-slot';
 import { VariantProps, cva } from 'class-variance-authority';
-import { AlignJustify, PanelLeftIcon } from 'lucide-react';
+import { AlignJustify } from 'lucide-react';
 import * as React from 'react';
 
 const SIDEBAR_COOKIE_NAME = 'sidebar_state';

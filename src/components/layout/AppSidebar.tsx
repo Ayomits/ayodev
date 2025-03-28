@@ -20,3 +20,5 @@ export const AppSidebar = forwardRef<HTMLDivElement, AppSidebarProps>(
     );
   }
 );
+
+AppSidebar.displayName = 'AppSidebar';

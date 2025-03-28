@@ -13,3 +13,5 @@ export const AppMain = forwardRef<HTMLDivElement, AppMainProps>(
     );
   }
 );
+
+AppMain.displayName = 'AppMain';

@@ -13,6 +13,7 @@ export async function generateMetadata({
   params,
 }: DocsPageProps): Promise<Metadata> {
   const { slug } = await params;
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const content = usePackageContent(slug);
   if (!content) {
     return {

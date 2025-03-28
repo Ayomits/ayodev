@@ -81,7 +81,7 @@ export const useNavigation = (): {
   const navItems: Record<string, ExtendedNavigationItem[]> = {};
 
   allDocs.forEach((doc: MdxDocument) => {
-    let paths = doc._raw.flattenedPath.split('/').map(cleanSegment);
+    const paths = doc._raw.flattenedPath.split('/').map(cleanSegment);
     const categoryKey = paths[0];
 
     if (!navItems[categoryKey]) {

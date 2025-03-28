@@ -1,4 +1,4 @@
-import { GithubRoute, PackagesRoute } from '@/const/routes';
+import { GithubRoute } from '@/const/routes';
 import { BaseNavigationItem } from '@/shared/hooks/useNavigation';
 
 export const navigation: BaseNavigationItem[] = [

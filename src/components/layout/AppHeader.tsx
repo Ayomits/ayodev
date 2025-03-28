@@ -6,7 +6,7 @@ import { Button } from '@/shared/ui/Button';
 import { SidebarTrigger } from '@/shared/ui/Sidebar';
 import { GithubIcon, SearchIcon } from 'lucide-react';
 import Link from 'next/link';
-import { CSSProperties, forwardRef, HTMLAttributes, ReactNode } from 'react';
+import { CSSProperties, forwardRef, HTMLAttributes } from 'react';
 
 interface AppHeaderProps extends HTMLAttributes<HTMLDivElement> {}
 
